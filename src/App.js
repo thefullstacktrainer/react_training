@@ -1,11 +1,11 @@
 import './App.css';
 
-const Post = () => {
+const Post = (props) => {
   return (
     <>
-      <h5>Title : "ReactJS Learning"</h5>
-      <h5>Author : Abhilash</h5>
-      <div>Description : This is all about ReactJS</div>
+      <h5>Title : {props.title}</h5>
+      <h5>Author : {props.author}</h5>
+      <div>Description : {props.desc}</div>
     </>
   )
 }
@@ -33,9 +33,9 @@ function App() {
           <span> There is no address</span>
         </>}
       </div>
-      <Post />
-      <Post />
-      <Post />
+      <Post title="ReactJS" author="Rajesh" desc="This is the ReactJS course" />
+      <Post title="Golang" author="Guru" desc="This is the Golang course" />
+      <Post title="Java" author="Harish" desc="This is the Java course" />
     </div>
   );
 }
