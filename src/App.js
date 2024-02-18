@@ -12,6 +12,11 @@ const Post = (props) => {
 function App() {
   const name = "Lakshmikant";
   const isVisible = true;
+  const defaultPost = {
+    title: "Html",
+    author: "unknown",
+    desc: "This is about HTML"
+  }
 
   // let address; 
   // let address = 0;
@@ -33,6 +38,7 @@ function App() {
           <span> There is no address</span>
         </>}
       </div>
+      <Post {...defaultPost} />
       <Post title="ReactJS" author="Rajesh" desc="This is the ReactJS course" />
       <Post title="Golang" author="Guru" desc="This is the Golang course" />
       <Post title="Java" author="Harish" desc="This is the Java course" />
