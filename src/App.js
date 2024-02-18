@@ -8,14 +8,14 @@ function App() {
     const response = await fetch(`${API_URL}&s=${title}`);
     const data = await response.json();
     console.log(data);
-    setMovies(data.Search)
+    setMovies([])
   }
 
   useEffect(() => { searchMovies("spiderman") }, []);
   return (
     <div className="App">
       <div>Movie App</div>
-      {movies.map(movie => <div key={movie.imdbID}>{movie.Title}</div>)}
+      {movies && movies.map(movie => <div key={movie.imdbID}>{movie.Title}</div>)}
     </div>
   );
 }
